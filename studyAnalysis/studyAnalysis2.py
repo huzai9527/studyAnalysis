@@ -24,18 +24,24 @@ allClass = set(allClass.dropna())
 
 className = list(studentNameDf.columns)
 moreInfo = pd.DataFrame(index=className,columns=['总人数','参与人数','参与率','未参加人员'])
+allCount = []
+attendCount = []
+percentCount = []
 for i in range(0,len(className)):
     nowClassName = str(className[i])
     nowClass = set(studentNameDf[nowClassName].dropna())
     a1 = len(nowClass)
-    moreInfo['总人数'] = a1
+    allCount.append(a1)
     a2 = len(nowClass.intersection(allClass))
-    moreInfo['参与人数'] = a2
+    attendCount.append(a2)
     a3 = a2/a1
-    moreInfo['参与率'] = a3
+    percentCount.append(a3)
     print('%s共%d名同学，其中%d名同学参与学习，参与率为：%.2f'%(nowClassName,a1,a2,a3))
+moreInfo['总人数'] = allCount
+moreInfo['参与人数'] = attendCount
+moreInfo['参与率'] = percentCount
 moreInfo.to_excel(sys.argv[1]+"大学习，无锡分校各班级参与情况.xlsx")
-
+print("EXCELL文件保存成功")
 
 
 
