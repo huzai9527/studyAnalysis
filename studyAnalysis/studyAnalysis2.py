@@ -19,7 +19,10 @@ allStudentFileDf = pd.read_excel(allStudentFile)
 studentNameDf = pd.read_excel(studentName)
 print(sys.argv[1]+"大学习，无锡分校各班级参与情况如下：")
 
-allClass = allStudentFileDf["姓名"].str.replace(r"[0-9]*","").replace("-","")
+allClass = allStudentFileDf["姓名"].str.replace(r"[0-9]*","")
+allClass = allClass.str.replace("-","")
+allClass = allClass.str.replace(" ","")
+allClass = allClass.str.replace("+","")
 allClass = set(allClass.dropna())
 
 className = list(studentNameDf.columns)
