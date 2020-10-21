@@ -1,4 +1,4 @@
-# 东南大学青年大学习统计
+# 东南大学无锡分校青年大学习统计
 
 ## 运行截图
 ![image.png](https://i.loli.net/2020/10/21/l7APkWE1cm9yTvS.png)
