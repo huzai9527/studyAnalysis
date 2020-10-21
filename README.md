@@ -24,7 +24,7 @@ pip install pandas
 ```bash
 python SUSmember.py 无锡分校-东南-第十一期
 ```
-- 运行完成输出，各班详细情况，并生成在结果文件夹EXCELL统计文件
+- 运行完成输出，各班详细情况，并在结果文件夹生成EXCELL统计文件
 ![image.png](https://i.loli.net/2020/10/21/ZxTS6I9LuAtCnGY.png)
 
 ## 有不是团员的只要在总名单中删除即可
