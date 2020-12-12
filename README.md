@@ -1,5 +1,10 @@
 # 东南大学无锡分校青年大学习统计
 
+## xlrd版本更新了,旧版本安装
+```bash
+pip install xlrd==1.2.0
+
+```
 ## 运行截图
 ![image.png](https://i.loli.net/2020/10/21/l7APkWE1cm9yTvS.png)
 ## 环境安装
